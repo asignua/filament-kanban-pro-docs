@@ -2,6 +2,10 @@
 
 All notable changes to `asignua/filament-kanban-pro` are documented here.
 
+## Unreleased
+
+- Lazy columns (needs the free package's `recordsPerColumn`): column totals are summed over all cards of the column (`ColumnSummary::totalsFromQuery()`), not the loaded page; swimlanes disable lazy columns.
+
 ## 1.0.2 - 2026-10-12
 
 - Licence terms (`LICENSE.md`): the commercial licence that comes with an Anystack licence key; prices in the README.

@@ -23,6 +23,7 @@ receiving fixes on its own.
 | Board from an enum or from database rows, any Eloquent model (int / UUID / ULID) | ✓ | ✓ |
 | Drag and drop that keeps the places of cards hidden by search or filters | ✓ | ✓ |
 | Ask before a move (modal fields), policy and `canMove()` authorization | ✓ | ✓ |
+| Lazy columns: load more cards per column (opt-in) | ✓ | ✓ |
 | Search box, foldable columns, edit modal, events, mokhosh-compatible API | ✓ | ✓ |
 | Swimlanes (by owner, priority, any attribute) | | ✓ |
 | WIP limits, soft or hard | | ✓ |
@@ -196,6 +197,18 @@ values on the cards (title from `relation('owner')`, from a `HasLabel` enum, or 
 Cards with an empty attribute go to an "Unassigned" lane (`unassigned('Nobody')` renames it, `unassigned(false)` removes it
 and forbids dropping into it). A drop into a lane is validated: a lane that is not on the board is refused with a
 notification and nothing is written. Columns are not collapsible while lanes are on.
+
+### Lazy columns
+
+The free package can load a column page by page (`protected ?int $recordsPerColumn = 25;`, or `recordsPerColumn(KanbanColumn)` for
+some columns only). Kanban Pro follows it: the column totals are summed by a query over **all** cards of the column that match the
+search and the table filters (not over the loaded page), WIP limits already count the whole column, and the table filters
+narrow the pages and the counters alike. Two things to know:
+
+- **Swimlanes switch lazy columns off.** A lane is cut from the loaded cards, so a board with `swimlanes()` loads every card
+  (`recordsPerColumn()` returns null while lanes are on).
+- The attribute of `ColumnSummary::sum()` (and its `currency()`) must be a real database column on a lazy column: it is read
+  with a query, not from the models, so an accessor-only attribute is not summed there.
 
 ### WIP limits
 
