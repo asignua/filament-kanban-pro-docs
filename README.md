@@ -14,6 +14,25 @@ Kanban Pro turns the free [filament-kanban](https://github.com/asignua/filament-
 base package's documented extension points and never forks its views or its move pipeline, so the base package keeps
 receiving fixes on its own.
 
+## Free or Pro?
+
+| | [Kanban](https://github.com/asignua/filament-kanban) (free, MIT) | [Kanban Pro](https://github.com/asignua/filament-kanban-pro-docs) (€69 / €169) |
+| --- | :---: | :---: |
+| Board from an enum or from database rows, any Eloquent model (int / UUID / ULID) | ✓ | ✓ |
+| Drag and drop that keeps the places of cards hidden by search or filters | ✓ | ✓ |
+| Ask before a move (modal fields), policy and `canMove()` authorization | ✓ | ✓ |
+| Search box, foldable columns, edit modal, events, mokhosh-compatible API | ✓ | ✓ |
+| Swimlanes (by owner, priority, any attribute) | | ✓ |
+| WIP limits, soft or hard | | ✓ |
+| Transition rules: allow-list, required fields on entering a column | | ✓ |
+| Column totals per currency, stale and overdue badges | | ✓ |
+| Several boards as tabs, Mine / All scope toggles | | ✓ |
+| Any Filament table filter on the board | | ✓ |
+| Workflow designer: steps, transitions and automations edited in the panel, journal, webhooks | | ✓ |
+
+Kanban Pro is an add-on: it requires the free package and builds on its documented extension points, so a board
+upgrades without rewriting.
+
 ## Screenshots
 
 Swimlanes by owner, WIP limits (soft and hard), column totals per currency, stale and overdue badges, boards as tabs and a Mine / All toggle on one page:
