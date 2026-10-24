@@ -5,6 +5,8 @@
 > repository you get with a licence — [buy one on Anystack](https://checkout.anystack.sh/filament-kanban-pro).
 > Questions: support@asign.in.ua.
 
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+
 <img class="filament-hidden" src="https://raw.githubusercontent.com/asignua/filament-kanban-pro-docs/main/art/cover.jpg" alt="Filament Kanban Pro">
 
 
