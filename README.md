@@ -201,12 +201,13 @@ notification and nothing is written. Columns are not collapsible while lanes are
 ### Lazy columns
 
 The free package can load a column page by page (`protected ?int $recordsPerColumn = 25;`, or `recordsPerColumn(KanbanColumn)` for
-some columns only). Kanban Pro follows it: the column totals are summed by a query over **all** cards of the column that match the
+some columns only). Kanban Pro follows it: the column totals are summed by one SQL `sum()` over **all** cards of the column that match the
 search and the table filters (not over the loaded page), WIP limits already count the whole column, and the table filters
 narrow the pages and the counters alike. Two things to know:
 
 - **Swimlanes switch lazy columns off.** A lane is cut from the loaded cards, so a board with `swimlanes()` loads every card
   (`recordsPerColumn()` returns null while lanes are on).
+- Changing the search, a filter, the tab or the scope starts the pages again from the first one.
 - The attribute of `ColumnSummary::sum()` (and its `currency()`) must be a real database column on a lazy column: it is read
   with a query, not from the models, so an accessor-only attribute is not summed there.
 
