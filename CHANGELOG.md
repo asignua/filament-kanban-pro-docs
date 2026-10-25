@@ -2,7 +2,8 @@
 
 All notable changes to `asignua/filament-kanban-pro` are documented here.
 
-## Unreleased
+## 1.1.0 - 2026-10-25
+- Requires `asignua/filament-kanban` ^1.1 (lazy columns).
 
 - Lazy columns (needs the free package's `recordsPerColumn`): column totals are summed over all cards of the column (`ColumnSummary::totalsFromQuery()`), not the loaded page; swimlanes disable lazy columns.
 
