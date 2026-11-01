@@ -481,6 +481,15 @@ vendor/bin/pint --test
 
 See [CHANGELOG.md](CHANGELOG.md).
 
+## More plugins by asign
+
+- [Kanban](https://filamentphp.com/plugins/asign-kanban) — drag-and-drop boards for Eloquent models
+- [Record Lock](https://filamentphp.com/plugins/asign-record-lock) — stop two people editing the same record
+- [Themes](https://filamentphp.com/plugins/asign-themes) — per-user and per-panel colour themes
+- [Activity Log Plus](https://filamentphp.com/plugins/asign-activity-log-plus) — audit trail and history for models
+
+All plugins: <https://filamentphp.com/plugins?q=asign>
+
 ## License
 
 Filament Kanban Pro is commercial software. See [LICENSE.md](https://github.com/asignua/filament-kanban-pro-docs/blob/main/LICENSE.md).
