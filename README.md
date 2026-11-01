@@ -10,9 +10,12 @@
 <img class="filament-hidden" src="https://raw.githubusercontent.com/asignua/filament-kanban-pro-docs/main/art/cover.jpg" alt="Filament Kanban Pro">
 
 
-Kanban Pro turns the free [filament-kanban](https://github.com/asignua/filament-kanban) board into a pipeline tool:
-**swimlanes**, **WIP limits**, **transition rules**, **column totals per currency**, **stale and overdue badges**,
-**several boards as tabs**, **Mine / All scope toggles** and **Filament table filters** on the board. It builds on the
+Kanban Pro turns the free [filament-kanban](https://github.com/asignua/filament-kanban) board into a pipeline tool with rules:
+a **workflow designer** (steps, transitions and automations edited in the panel), **transition rules**, **WIP limits**,
+**column totals per currency** and **several boards as tabs** with their own scope and limits. Around them: **swimlanes**,
+**stale and overdue badges**, **Mine / All scope toggles** and **Filament table filters** on the board. The free package
+already covers the board itself (drag and drop, lazy columns, search, the edit modal, authorization and a migration path
+from `mokhosh/filament-kanban`); Pro is what you add when the board has to enforce a process. It builds on the
 base package's documented extension points and never forks its views or its move pipeline, so the base package keeps
 receiving fixes on its own.
 
@@ -25,13 +28,13 @@ receiving fixes on its own.
 | Ask before a move (modal fields), policy and `canMove()` authorization | ✓ | ✓ |
 | Lazy columns: load more cards per column (opt-in) | ✓ | ✓ |
 | Search box, foldable columns, edit modal, events, mokhosh-compatible API | ✓ | ✓ |
-| Swimlanes (by owner, priority, any attribute) | | ✓ |
-| WIP limits, soft or hard | | ✓ |
-| Transition rules: allow-list, required fields on entering a column | | ✓ |
-| Column totals per currency, stale and overdue badges | | ✓ |
-| Several boards as tabs, Mine / All scope toggles | | ✓ |
-| Any Filament table filter on the board | | ✓ |
 | Workflow designer: steps, transitions and automations edited in the panel, journal, webhooks | | ✓ |
+| Transition rules: allow-list per step, required fields on entering a column | | ✓ |
+| WIP limits, soft or hard | | ✓ |
+| Column totals per currency, stale and overdue badges | | ✓ |
+| Several boards as tabs, each with its own scope and limits; Mine / All toggles | | ✓ |
+| Swimlanes (by owner, priority, any attribute) | | ✓ |
+| Any Filament table filter on the board | | ✓ |
 
 Kanban Pro is an add-on: it requires the free package and builds on its documented extension points, so a board
 upgrades without rewriting.
