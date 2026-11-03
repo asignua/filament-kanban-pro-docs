@@ -2,6 +2,9 @@
 
 All notable changes to `asignua/filament-kanban-pro` are documented here.
 
+## 1.2.0 - Unreleased
+- Requires `asignua/filament-kanban` ^1.2. Real-time: the workflow engine (moves outside a board) and the workflow designer (steps, edges, reasons, automations, step deletion) now update open boards live; the base package covers drags, reorders and edits. Opt-in, off by default.
+
 ## 1.1.0 - 2026-10-25
 - Requires `asignua/filament-kanban` ^1.1 (lazy columns).
 
